@@ -3,13 +3,13 @@ def main():
     email = input("Email: ")
     while email != "":
         name = name_from_email(email)
-        name_check = input("Is your name {}? (Y/n) ").format(name))
+        name_check = input("Is your name {}? (Y/n) ".format(name))
         if name_check.upper() != "Y" and name_check != "":
             name = input("Name: ")
         email_to_name[email] = name
         email = input("Email: ")
 
-    for email, name in email_to_name.items():
+    for email, name in email_to_name.items():  # Loop through dictionary to display emails and names.
         print("{} ({})".format(name, email))
 
 
