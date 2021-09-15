@@ -12,7 +12,8 @@ class Guitar:
         self.cost = cost
 
     def __str__(self):
-        return "{} ({}) : ${:,.2f}".format(self.name, self.year, self.cost)  # 2f format specifier.
+        """2f format specifier to achieve (Gibson L-5 CES (1922) : $16,035.40)"""
+        return "{} ({}) : ${:,.2f}".format(self.name, self.year, self.cost)
 
     def get_age(self):
         return CURRENT_YEAR - self.year  # Using current year get age of the guitar.
